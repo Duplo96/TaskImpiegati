@@ -1,0 +1,41 @@
+﻿@model List<TaskImpiegati.Models.Impiegato>
+
+<h1>Lista Impiegati</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Matricola</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Data di Nascita</th>
+            <th>Ruolo</th>
+            <th>Reparto</th>
+            <th>Indirizzo di residenza</th>
+            <th>Citta di residenza</th>
+            <th>Provincia di residenza</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Impiegato imp in Model)
+        {
+            <tr>
+                <td>
+                    <a href="/Impiegato/Dettaglio/@imp.Matricola">@imp.Matricola</a>
+                </td>
+                <td>@imp.Nome</td>
+                <td>@imp.Cognome</td>
+                <td>@imp.DataDiNascita</td>
+                <td>@imp.Ruolo</td>
+                <td>@imp.Reparto</td>
+                <td>@imp.IndirizzoDiResidenza</td>
+                <td>@imp.CittaDiResidenza</td>
+                <td>@imp.ProvinciaDiResidenza</td>
+                <td>
+                    <button class="btn btn-danger" type="button" onclick="elimina('@imp.Matricola')">Elimina</button>
+                    <a class="btn btn-warning" href="/Impiegato/Modifica/@imp.Matricola">Modifica</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

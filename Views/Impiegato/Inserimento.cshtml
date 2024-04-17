@@ -1,0 +1,44 @@
+﻿@model TaskImpiegati.Models.Impiegato
+
+<h1>Inserisci Impiegato</h1>
+
+<form method="post" asp-controller="Impiegato" asp-action="Salvataggio">
+    <div class="form-group">
+        <label for="Matricola">Matricola</label>
+        <input type="text" class="form-control" asp-for=Matricola />
+    </div>
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" class="form-control" asp-for=Nome />
+    </div>
+    <div class="form-group">
+        <label for="Cognome">Cognome</label>
+        <textarea type="text" class="form-control" asp-for=Cognome></textarea>
+    </div>
+    <div class="form-group">
+        <label for="DataDiNascita">Data di Nascita</label>
+        <input type="date" min="0" class="form-control" asp-for=DataDiNascita />
+    </div>
+    <div class="form-group">
+        <label for="Ruolo">Ruolo</label>
+        <input type="text" class="form-control" asp-for=Ruolo />
+    </div>
+    <div class="form-group">
+        <label for="Reparto">Reparto</label>
+        <input type="text" class="form-control" asp-for=Reparto />
+    </div>
+    <div class="form-group">
+        <label for="IndirizzoDiResidenza">Indirizzo di Residenza</label>
+        <input type="text" class="form-control" asp-for=IndirizzoDiResidenza />
+    </div>
+    <div class="form-group">
+        <label for="CittaDiResidenza">Città di Residenza</label>
+        <input type="text" class="form-control" asp-for=CittaDiResidenza />
+    </div>
+    <div class="form-group">
+        <label for="ProvinciaDiResidenza">Provincia di Residenza</label>
+        <input type="text" class="form-control" asp-for=ProvinciaDiResidenza />
+    </div>
+
+    <button class="btn btn-primary btn-block mt-2" type="submit">Salva</button>
+</form>
